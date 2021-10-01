@@ -1,0 +1,23 @@
+<div class="dailoq-page">
+  <form [formGroup]="form">
+    <div class="form-group">
+      <label for="name">name</label>
+      <input
+        pInputText
+        type="text"
+        name="name"
+        id="name"
+        formControlName="name"
+      />
+    </div>
+    <div class="form-button">
+      <button
+        pRipple
+        pButton
+        type="button"
+        label="Submit"
+        (click)="submit()"
+      ></button>
+    </div>
+  </form>
+</div>

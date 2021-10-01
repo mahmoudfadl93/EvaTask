@@ -1,0 +1,26 @@
+<app-layout>
+  <div AppRouting>
+    <div class="page-header">
+      <h1>Countries</h1>
+      <p-button
+        icon="pi pi-plus"
+        (click)="show('new-country', null)"
+        label="New"
+        iconPos="left"
+      ></p-button>
+    </div>
+
+    <div class="page-body">
+      <custom-table
+        [isHavePaginator]="true"
+        [isHaveDetails]="true"
+        [cols]="cols"
+        [items]="items"
+        (onEditRow)="show('edit-country', $event)"
+        (onClickRow)="showDetails($event)"
+        (onDeleteRow)="deleteRow($event)"
+      >
+      </custom-table>
+    </div>
+  </div>
+</app-layout>

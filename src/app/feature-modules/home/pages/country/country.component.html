@@ -1,0 +1,32 @@
+<app-layout>
+  <div AppRouting>
+    <div class="page-header">
+      <h1>Country</h1>
+      <p-button
+        icon="pi pi-plus"
+        (click)="show('new-city', null)"
+        label="New City"
+        iconPos="left"
+      ></p-button>
+    </div>
+
+    <card>
+      <ng-container card-text>
+        {{ country?.name }}
+      </ng-container>
+    </card>
+
+    <div class="page-body">
+      <custom-table
+        [isHavePaginator]="true"
+        [isHaveDetails]="true"
+        [cols]="cols"
+        [items]="items"
+        (onEditRow)="show('edit-city', $event)"
+        (onClickRow)="showDetails($event)"
+        (onDeleteRow)="deleteRow($event)"
+      >
+      </custom-table>
+    </div>
+  </div>
+</app-layout>

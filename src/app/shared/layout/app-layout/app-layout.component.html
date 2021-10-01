@@ -1,0 +1,13 @@
+<p-toast></p-toast>
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+<div class="app-layout" [ngClass]="{ 'app-container': display }">
+  <p-sidebar [(visible)]="display" position="left" [modal]="true">
+    <side-bar></side-bar>
+  </p-sidebar>
+  <div>
+    <app-header (sidenavToggle)="display = !display"></app-header>
+    <main class="main-page">
+      <ng-content #AppRouting></ng-content>
+    </main>
+  </div>
+</div>

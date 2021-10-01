@@ -1,0 +1,122 @@
+.app-layout {
+  .main-page {
+    padding: 1rem;
+    .page-header {
+      margin: 2rem 0;
+      @include flex(
+        $direction: row,
+        $align: center,
+        $justify: space-between,
+        $wrap: wrap
+      );
+    }
+
+    .action-table {
+      @include flex($direction: row, $align: center, $wrap: wrap);
+      gap: 2rem;
+    }
+  }
+}
+
+.app-container {
+  padding-left: 320px;
+  .p-sidebar {
+    box-shadow: 1px 1px 0px 0px rgb(0 0 0 / 20%),
+      1px 1px 0px 0px rgb(0 0 0 / 14%), 1px 1px 0px 0px rgb(0 0 0 / 12%);
+  }
+}
+
+.tooblar-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  .brand-logo {
+    img {
+      width: auto;
+      height: 50px;
+    }
+  }
+}
+
+.sidenav-list {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 1rem;
+      i {
+        font-size: 1.3rem;
+      }
+      a {
+        cursor: pointer;
+        color: #000;
+        text-decoration: none;
+      }
+      &.active {
+        background: #f0cf67;
+      }
+    }
+  }
+}
+
+.page-container {
+  gap: 1.5rem;
+  @include flex($direction: column);
+
+  .page-header {
+    @include flex($direction: row, $align: center, $justify: space-between);
+    padding: 1rem;
+    &.have-back-button {
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+  }
+}
+
+.auth-body-router {
+  width: 100%;
+  @include flex($direction: row, $align: center, $justify: center);
+  app-login{
+    width: 40%;
+    .button-form{
+      width: 100%;
+      @include flex($direction: row, $align: center, $justify: center);
+      margin-top: 1rem;
+    }
+  }
+}
+.form-control {
+  &.custom-password {
+    padding: 0;
+    .p-password {
+      width: 100%;
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+.dailoq-page{
+  @include flex($direction: row, $align: center, $justify: center);
+  .form-group{
+    @include flex($direction: column, $align: center, $justify: center);
+  }
+  .form-button{
+    @include flex($direction: row, $align: center, $justify: center);
+    margin-top: 2rem;
+  }
+}
+
+
+.progress-container{
+  @include flex($direction: row, $align: center, $justify: center);
+  width: 100%;
+  height: 100vh;
+}
